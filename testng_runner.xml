@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Vytrack  Automation" verbose="1">
+
+    <test name="Vytrack Smoke Test">
+        <packages>
+            <package name="com.cybertek.tests.CostPage"></package>
+
+        </packages>
+    </test>
+</suite>
+
+
+<!--for running all classes -->
+<!-- <package name=".*"></package>-->
+
+        <!--for running specific classes -->
+<!--<test name="Vytrack Smoke Test">
+        <classes>
+            <class name="com.cybertek.tests.CostPage"></class>
+
+        </classes>
+    </test>-->
