@@ -62,9 +62,6 @@ public class VehicleCostPage extends BasePage {
     @FindBy(xpath = "//div[@class='flash-messages-holder']")
     public WebElement message;
 
-    @FindBy(xpath = "//tr[@class='grid-row row-click-action'][1]")
-    public WebElement itemList;
-
     @FindBy(xpath = "//button[.='Add']")
     public WebElement add;
 
@@ -103,8 +100,6 @@ public class VehicleCostPage extends BasePage {
 
 
     public void costPage(){
-        LoginPage loginPage= new LoginPage();
-        loginPage.loginAsSalesManager();
 
         VehicleCostPage costPage = new VehicleCostPage();
         costPage.navigateToModule("Fleet", "Vehicle Costs");

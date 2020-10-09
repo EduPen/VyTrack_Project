@@ -3,6 +3,7 @@ package com.cybertek.tests;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.cybertek.pages.LoginPage;
 import com.cybertek.pages.VehicleCostPage;
 import com.cybertek.utilities.BrowserUtils;
 import com.cybertek.utilities.ConfigurationReader;
@@ -63,8 +64,7 @@ public class TestBase { //
         wait = new WebDriverWait(driver,10);
         driver.get(ConfigurationReader.get("url"));
 
-        VehicleCostPage page=new VehicleCostPage();
-        page.costPage();
+
 
     }
 
@@ -79,7 +79,7 @@ public class TestBase { //
             extentLogger.fail(result.getThrowable());  //add exception ot report if there
 
         }
-        Thread.sleep(4000);
+        Thread.sleep(1000);
         Driver.closeDriver();
     }
 

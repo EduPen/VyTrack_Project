@@ -3,10 +3,9 @@
 <suite name="Vytrack  Automation" verbose="1">
 
     <test name="Vytrack Smoke Test">
-        <packages>
-            <package name="com.cybertek.tests.CostPage"></package>
-
-        </packages>
+       <classes>
+           <class name="com.cybertek.tests.CostPage.testWithDDF"></class>
+       </classes>
     </test>
 </suite>
 
