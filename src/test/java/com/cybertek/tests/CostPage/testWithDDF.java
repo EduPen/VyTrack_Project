@@ -52,7 +52,7 @@ public class testWithDDF extends TestBase {
 
         Assert.assertEquals(expectedResult, actualResult, "verify that you canceled the cost creating");
         extentLogger.info("Verify canceled the cost page");
-        extentLogger.info("TC-1 PASSED");
+        extentLogger.pass("PASS");
     }
 
 
@@ -75,7 +75,7 @@ public class testWithDDF extends TestBase {
 
         Assert.assertEquals(expectedUrl, actualUrl, "Verify that you accessed th cost page");
         extentLogger.info("Verify that successfully accessed the Vehicle Cost Page");
-        extentLogger.info("TC-2 PASSED");
+        extentLogger.pass("PASS");
     }
 
     @Test(dataProvider = "userData")
@@ -111,7 +111,7 @@ public class testWithDDF extends TestBase {
 
         Assert.assertEquals(actualMessage, expectedMessage, "Verify that you created the cost");
         extentLogger.info("Verify that the cost created");
-        extentLogger.info("TC-3 PASSED");
+        extentLogger.pass("PASS");
     }
 
     @Test(dataProvider = "userData")
@@ -142,7 +142,7 @@ public class testWithDDF extends TestBase {
 
         Assert.assertEquals(actualMessage, expectedMessage, "Verify that you delete the cost");
         extentLogger.info("Verify that the cost deleted");
-        extentLogger.info("TC-4 PASSED");
+        extentLogger.pass("PASS");
     }
 
     @Test(dataProvider = "userData")
@@ -184,7 +184,7 @@ public class testWithDDF extends TestBase {
 
         Assert.assertEquals(actualMessage, expectedMessage, "Verify that you edit the cost");
         extentLogger.info("Verify that the cost edited");
-        extentLogger.info("TC-5 PASSED");
+        extentLogger.pass("PASS");
     }
 
  @Test(dataProvider = "userData")
@@ -233,7 +233,7 @@ public class testWithDDF extends TestBase {
         Assert.assertEquals(actualMessage, expectedMessage, "Verify that you add attachment");
 
      extentLogger.info("Verify that the attachment added");
-     extentLogger.info("TC-6 PASSED");
+     extentLogger.pass("PASS");
     }
 
     @Test(dataProvider = "userData")
@@ -276,7 +276,7 @@ public class testWithDDF extends TestBase {
         Assert.assertEquals(actualMessage, expectedMessage, "Verify that you add note");
 
         extentLogger.info("Verify that the note added");
-        extentLogger.info("TC-7 PASSED");
+        extentLogger.pass("PASS");
     }
 
     @Test(dataProvider = "userData")
@@ -318,7 +318,7 @@ public class testWithDDF extends TestBase {
 
         Assert.assertEquals(actualMessage, expectedMessage, "Verify that you add event");
         extentLogger.info("Verify that the event added");
-        extentLogger.info("TC-8 PASSED");
+        extentLogger.pass("PASS");
     }
 
     @Test(dataProvider = "userData")
@@ -364,7 +364,7 @@ public class testWithDDF extends TestBase {
         System.out.println("actual="+actual);
         Assert.assertEquals(actual,expected, "verify grid reset");
         extentLogger.info("Verify that the grid is reset");
-        extentLogger.info("TC-9 PASSED");
+        extentLogger.pass("PASS");
     }
 
 }
