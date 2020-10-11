@@ -93,13 +93,13 @@ public class testWithDDF extends TestBase {
         extentLogger.info("Select the Vehicle Cost in the Fleet module");
         createNewCost.CreateVehicleCost.click();
         extentLogger.info("Click the create vehicle cost button");
-        createNewCost.chooseAValue.click();
+        createNewCost.clickType.click();
 
         createNewCost.select.click();
 
-        createNewCost.totalPrice.sendKeys("100");
+        createNewCost.cost.sendKeys("100");
 
-        createNewCost.cost.sendKeys("All drivers will get 100% support for the first year");
+        createNewCost.description.sendKeys("All drivers will get 100% support for the first year");
         extentLogger.info("Fill up the input boxes");
         createNewCost.SaveAndClose.click();
         extentLogger.info("Click the save button");
@@ -262,10 +262,10 @@ public class testWithDDF extends TestBase {
 
         createNewCost.addNote.click();
         extentLogger.info("Click the add note button");
-        driver.switchTo().frame(driver.findElement(By.xpath("//iframe")));
+        driver.switchTo().frame(createNewCost.noteFrame);
 
         BrowserUtils.waitFor(4);
-        driver.findElement(By.xpath("//*[@id=\"tinymce\"]")).sendKeys("This is my first note");
+        createNewCost.notepad.sendKeys("This is my first note");
         extentLogger.info("add some note");
         driver.switchTo().parentFrame();
 
