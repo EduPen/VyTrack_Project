@@ -156,27 +156,30 @@ public class testWithDDF extends TestBase {
 
         VehicleCostPage createNewCost = new VehicleCostPage();
         createNewCost.costPage();
-        createNewCost.waitUntilLoaderScreenDisappear();
 
         extentLogger.info("Select the Vehicle Cost in the Fleet module");
-
         createNewCost.selectedCost.click();
         BrowserUtils.waitFor(4);
+
         extentLogger.info("Select an item from costs list and click it");
         createNewCost.edit.click();
         BrowserUtils.waitFor(4);
+
         extentLogger.info("Click the edit button");
         createNewCost.clickType.click();
 
-        WebElement dropdown = driver.findElement(By.name("custom_entity_type[Type]"));
-        Select stateDropdown = new Select(dropdown);
+        createNewCost.selectType.click();
         extentLogger.info("Select a cost item from list");
-        stateDropdown.selectByIndex(3);
 
+        createNewCost.cost.clear();
+        createNewCost.cost.sendKeys("1000");
+
+        createNewCost.description.clear();
         createNewCost.description.sendKeys("You have to allow to change");
         extentLogger.info("fill up some information");
-        createNewCost.submit.click();
-        extentLogger.info("Click the submit button");
+
+        createNewCost.SaveAndClose.click();
+        extentLogger.info("Click the save button");
         BrowserUtils.waitForVisibility(createNewCost.message, 5);
         String actualMessage = createNewCost.message.getText();
 

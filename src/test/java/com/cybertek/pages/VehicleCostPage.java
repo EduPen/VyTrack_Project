@@ -53,7 +53,7 @@ public class VehicleCostPage extends BasePage {
     @FindBy(xpath= "//input[@name='custom_entity_type[TotalPrice]']")
     public WebElement totalPrice;
 
-    @FindBy(xpath = "//textarea")
+    @FindBy(name = "custom_entity_type[TotalPrice]")
     public WebElement cost;
 
     @FindBy(xpath = "//select/option[2]")
@@ -83,7 +83,10 @@ public class VehicleCostPage extends BasePage {
     @FindBy(css = ".select2-choice")
     public WebElement clickType;
 
-    @FindBy(name = "custom_entity_type[CostDescriptions]")
+    @FindBy(css = ".select2-results>li")
+    public WebElement selectType;
+
+    @FindBy(xpath = "//textarea")
     public WebElement description;
 
     @FindBy(xpath = "//tr[@class='grid-row row-click-action'][2]")
