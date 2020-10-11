@@ -1,7 +1,6 @@
 package com.cybertek.pages;
 
 import com.cybertek.utilities.BrowserUtils;
-import com.cybertek.utilities.ConfigurationReader;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -47,16 +46,10 @@ public class VehicleCostPage extends BasePage {
     @FindBy(xpath = "//label[@class='dib'][3]")
     public WebElement totalRecords;
 
-    @FindBy(xpath = "//span[.='Choose a value...']")
-    public WebElement chooseAValue;
-
-    @FindBy(xpath= "//input[@name='custom_entity_type[TotalPrice]']")
-    public WebElement totalPrice;
-
     @FindBy(name = "custom_entity_type[TotalPrice]")
     public WebElement cost;
 
-    @FindBy(xpath = "//select/option[2]")
+    @FindBy(xpath = "//select/option[4]")
     public WebElement select;
 
     @FindBy(xpath = "//div[@class='flash-messages-holder']")
@@ -100,6 +93,12 @@ public class VehicleCostPage extends BasePage {
 
     @FindBy(xpath = "(//td[@class='sort-cell'])[4]")
     public WebElement dateGrid;
+
+    @FindBy(xpath = "//*[@id=\"tinymce\"]")
+    public WebElement notepad;
+
+    @FindBy(xpath = "//iframe")
+    public WebElement noteFrame;
 
 
     public void costPage(){
