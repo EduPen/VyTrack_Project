@@ -204,8 +204,6 @@ public class testWithDDF extends TestBase {
 
          createNewCost.waitUntilLoaderScreenDisappear();
 
-
-
         BrowserUtils.waitFor(4);
         createNewCost.selectedCost.click();
         extentLogger.info("Select an item from costs list and click it");
