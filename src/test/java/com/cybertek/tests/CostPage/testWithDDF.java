@@ -324,7 +324,7 @@ public class testWithDDF extends TestBase {
 
     @Test(dataProvider = "userData")
     public void ResettingTheCostGrid(String username,String password) {
-        extentLogger= report.createTest("TC-8 Adding Event To Cost");
+        extentLogger= report.createTest("TC-9 Reseting Cost Grid");
         extentLogger.info("Open Chrome Browser");
         LoginPage loginPage = new LoginPage();
 
