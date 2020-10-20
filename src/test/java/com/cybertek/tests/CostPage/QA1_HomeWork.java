@@ -5,11 +5,14 @@ import com.cybertek.pages.LoginPage;
 import com.cybertek.tests.TestBase;
 import com.cybertek.utilities.ExcelUtil;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import javax.swing.*;
 import java.sql.Wrapper;
 import java.util.Arrays;
 import java.util.List;
@@ -109,12 +112,13 @@ public class QA1_HomeWork extends TestBase {
         String records=totalRecords.substring(9,totalRecords.length()-8);
 
         int total=0;
-        for (int i = 1; i <70; i++) {
-            List<WebElement> allRowsWithoutHeader=driver.findElements(By.xpath("//table/tbody/tr"));
-            calendarEvents.pageNumber.sendKeys("i");
-            total+= allRowsWithoutHeader.size();
 
-        }
+        for (int i = 1; i <=70; i++) {
+            calendarEvents.pageNumber.sendKeys("i"+ Keys.ENTER);
+            List<WebElement> allRowsWithoutHeader=driver.findElements(By.xpath("//table/tbody/tr"));
+          total+= allRowsWithoutHeader.size();
+
+       }
 
 
         String totalRow=Integer.toString(total);
